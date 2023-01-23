@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -39,7 +39,7 @@ class _MyPainterState extends State<MyPainter> {
       painter: MyPainterCanvas(),
       child: CustomPaint(
         painter: MyPainterCanvas(),
-        child: Container(),
+        child: Container(color: null),
       ),
     ));
   }
