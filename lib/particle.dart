@@ -1,10 +1,13 @@
-//import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class Particle {
-  Offset? position;
-  Color? color;
+  late Offset position;
+  late Color color;
   // defines vilocity
-  double? speed;
-  double? theta;
+  late double speed;
+  late double theta;
+
+  late double radius;
+  //Particle([this.color, this.position, this.speed, this.theta]);
 }
