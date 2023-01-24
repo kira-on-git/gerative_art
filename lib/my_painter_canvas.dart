@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'particle.dart';
 
-Random rgn = Random(100);
+Random rgn = Random(DateTime.now().millisecond);
 
 Color getRandomColor(Random rgn) {
   var a = rgn.nextInt(255);
