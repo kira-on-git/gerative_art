@@ -51,7 +51,7 @@ class _MyPainterState extends State<MyPainter>
     controller.forward();
 
 //initialize particles
-    particles = List.generate(300, (p) {
+    particles = List.generate(1000, (p) {
       var p = Particle();
       p.color = getRandomColor(rgn);
       p.position = const Offset(-1, -1);
