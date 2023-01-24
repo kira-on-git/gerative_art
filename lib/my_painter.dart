@@ -72,11 +72,12 @@ class _MyPainterState extends State<MyPainter>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black87,
         body: CustomPaint(
-      painter: MyPainterCanvas(rgn, particles, animation.value),
-      child: Container(
-        color: Colors.yellow.withAlpha(1),
-      ),
-    ));
+          painter: MyPainterCanvas(rgn, particles, animation.value),
+          child: Container(
+            color: Colors.yellow.withAlpha(1),
+          ),
+        ));
   }
 }

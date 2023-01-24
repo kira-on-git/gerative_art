@@ -35,7 +35,7 @@ class MyPainterCanvas extends CustomPainter {
     //paint the objects
     for (var p in particles) {
       var paint = Paint();
-      paint.color = Colors.red;
+      paint.color = p.color;
       canvas.drawCircle(p.position, p.radius, paint);
     }
     // var dx = size.width / 2;
