@@ -3,15 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'particle.dart';
 
-Random rgn = Random(DateTime.now().millisecond);
-
-Color getRandomColor(Random rgn) {
-  var a = rgn.nextInt(255);
-  var r = rgn.nextInt(255);
-  var g = rgn.nextInt(255);
-  var b = rgn.nextInt(255);
-  return Color.fromARGB(a, r, g, b);
-}
+Random rgn = Random(DateTime.now().microsecondsSinceEpoch);
 
 Offset polarToCartesian(double speed, double theta) {
   return Offset(speed * cos(theta), speed * sin(theta));
@@ -19,9 +11,10 @@ Offset polarToCartesian(double speed, double theta) {
 
 class MyPainterCanvas extends CustomPainter {
   List<Particle> particles;
-  MyPainterCanvas(this.particles);
+  Random rgn;
+  double animValue;
+  MyPainterCanvas(this.rgn, this.particles, this.animValue);
 
-  // get rgn => Random(100);
   @override
   void paint(Canvas canvas, Size size) {
     //update the objects
